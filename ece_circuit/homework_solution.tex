@@ -19,18 +19,6 @@
 %\usepackage{tikz-3dplot}
 \usepackage[RPvoltages]{circuitikz}
 
-%%% Colours used in field vectors and propagation direction
-\definecolor{mycolor}{rgb}{1,0.2,0.3}
-\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
-\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
-\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
-\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
-\definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
-\definecolor{darkpowderblue}{rgb}{0.0, 0.2, 0.6}
-\definecolor{darktangerine}{rgb}{1.0, 0.66, 0.07}
-\definecolor{emerald}{rgb}{0.31, 0.78, 0.47}
-\definecolor{palatinatepurple}{rgb}{0.41, 0.16, 0.38}
-\definecolor{pastelviolet}{rgb}{0.8, 0.6, 0.79}
 \begin{document}
 
 \begin{center}
@@ -40,19 +28,19 @@
 \end{center}
 
 {\textbf{Name:}\ Benjamin Feaster \hspace{\fill} \textbf{Due Date:} August 3, 2020, 9:00 AM \par
-{ \textbf{Mailbox Number:}} \ 939 \hspace{60 mm} \textbf{Assignment:} 3 \vspace{.4cm} \par % /par required to remove underfull /hbox error
+{ \textbf{Mailbox Number:}} \ 939 \hspace{60 mm} \textbf{Assignment:} 3 \vspace{.4cm} \par
 	\hrule 
 
-\paragraph*{Problem 1} %\hfill \newline
+\paragraph*{Problem 1}
  Given the following second order circuit:
 
 \begin{figure}[h]
 \centering
 \begin{circuitikz}
 	\draw (0,0) 
-	to[american voltage source,v=$V_1$] (0,2) % The voltage source
+	to[american voltage source,v=$V_1$] (0,2)
     to[short] (2,2)
-    to[R=$R_1$] (2,0) % The resistor
+    to[R=$R_1$] (2,0)
     to[short] (0,0);
     \draw (2,2)
     to[short] (4,2)
@@ -62,22 +50,26 @@
     to[short] (6,2)
     to[C=$C_1$] (6,0)
     to[short] (4,0);
- \begin{scope}[overlay]
- \end{scope} 
 \end{circuitikz}
-
-\begin{circuitikz}[scale=1]\draw
-(5,.5) node [op amp] (opamp) {}
-(0,0) node [left] {$U_{we}$} to [R, l=$R_d$, o-*] (2,0)
-to [R, l=$R_d$, *-*] (opamp.+)
-to [C, l_=$C_{d2}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
-(opamp.out) |- (3.5,2) to [C, l_=$C_{d1}$, *-] (2,2) to [short] (2,0)
-(opamp.-) -| (3.5,2)
-(opamp.out) to [short, *-o] (7,.5) node [right] {$U_{wy}$}
-;\end{circuitikz}
 
 \caption{}
 \end{figure}
+
+\begin{circuitikz}[scale=1]
+	\draw (5,.5) % create starting point to place objects
+	node [op amp] (opamp) {} (0,0) % op amp at predefined origin
+	node [left] {$V_{in}$} % create open node on left
+	to [R, l=$R_a$, o-*] (2,0) % resistor at coords with open circle on left and solid cirle on right
+	to [R, l=$R_b$, *-*] (opamp.+) % connect resistors and connect to the op amp + side
+	to [C, l_=$C_{d}$, *-] ($(opamp.+)+(0,-2)$) % connect op amp + side to capacitor at given coords
+	node [ground] {} % connect ground at the end
+	(opamp.out) |- (3.5,2) % draw op amp output line path to top of op amp at given coords
+	to [C, l_=$C_{e}$, *-] (2,2) % draw line from previous coords to new capacitor at coords
+	to [short] (2,0) % draw line from previous capacitor to the line below at coords
+	(opamp.-) -| (3.5,2) (opamp.out) % draw the - side of op amp to the node at coords to the op amp output
+	to [short, *-o] (7,.5) % draw line from op amp output to coords
+	node [right] {$V_{out}$}; % add a node on right side with open circle
+\end{circuitikz}
 
 The following questions refer to Figure 1 above:
 
