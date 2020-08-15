@@ -1,0 +1,94 @@
+\documentclass[10pt]{article}
+\title{ECE205 Assignment 4}
+\nonstopmode
+%\usepackage[utf-8]{inputenc}
+\usepackage{graphicx} % Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    % For tables and other floats
+\usepackage{verbatim} % For comments and other
+\usepackage{amsmath}  % For math
+\usepackage{amssymb}  % For more math
+\usepackage{fullpage} % Set margins and place page numbers at bottom center
+\usepackage{paralist} % paragraph spacing
+\usepackage{listings} % For source code
+\usepackage{subfig}   % For subfigures
+\usepackage{enumitem} % useful for itemization
+\usepackage{siunitx}  % standardization of si units
+
+\usepackage{tikz,bm} % Useful for drawing plots
+%\usepackage{tikz-3dplot}
+\usepackage[RPvoltages]{circuitikz}
+
+%%% Colours used in field vectors and propagation direction
+\definecolor{mycolor}{rgb}{1,0.2,0.3}
+\definecolor{brightgreen}{rgb}{0.4, 1.0, 0.0}
+\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+\definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
+\definecolor{darkpowderblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{darktangerine}{rgb}{1.0, 0.66, 0.07}
+\definecolor{emerald}{rgb}{0.31, 0.78, 0.47}
+\definecolor{palatinatepurple}{rgb}{0.41, 0.16, 0.38}
+\definecolor{pastelviolet}{rgb}{0.8, 0.6, 0.79}
+\begin{document}
+
+\begin{center}
+	\hrule
+	\vspace{.4cm}
+	{\textbf { \large ECE 205 --- Signals and Systems}}
+\end{center}
+
+{\textbf{Name:}\ Benjamin Feaster \hspace{\fill} \textbf{Due Date:} August 3, 2020, 9:00 AM \par
+{ \textbf{Mailbox Number:}} \ 939 \hspace{60 mm} \textbf{Assignment:} 3 \vspace{.4cm} \par % /par required to remove underfull /hbox error
+	\hrule 
+
+\paragraph*{Problem 1} %\hfill \newline
+ Given the following second order circuit:
+
+\begin{figure}[h]
+\centering
+\begin{circuitikz}
+	\draw (0,0) 
+	to[american voltage source,v=$V_1$] (0,2) % The voltage source
+    to[short] (2,2)
+    to[R=$R_1$] (2,0) % The resistor
+    to[short] (0,0);
+    \draw (2,2)
+    to[short] (4,2)
+    to[L=$L_1$] (4,0)
+    to[short] (2,0);
+    \draw (4,2)
+    to[short] (6,2)
+    to[C=$C_1$] (6,0)
+    to[short] (4,0);
+ \begin{scope}[overlay]
+ \end{scope} 
+\end{circuitikz}
+
+\begin{circuitikz}[scale=1]\draw
+(5,.5) node [op amp] (opamp) {}
+(0,0) node [left] {$U_{we}$} to [R, l=$R_d$, o-*] (2,0)
+to [R, l=$R_d$, *-*] (opamp.+)
+to [C, l_=$C_{d2}$, *-] ($(opamp.+)+(0,-2)$) node [ground] {}
+(opamp.out) |- (3.5,2) to [C, l_=$C_{d1}$, *-] (2,2) to [short] (2,0)
+(opamp.-) -| (3.5,2)
+(opamp.out) to [short, *-o] (7,.5) node [right] {$U_{wy}$}
+;\end{circuitikz}
+
+\caption{}
+\end{figure}
+
+The following questions refer to Figure 1 above:
+
+\begin{enumerate}[label=(\alph*)]
+\item Find $V_1$ in terms of $R_1$, $L_1$, and $C_1$.
+
+\begin{equation}
+	V_{p1} = \left( \frac{R_1}{R_1 + R_2} \right) V_1 
+\end{equation}
+
+
+\end{enumerate}
+
+\end{document}
