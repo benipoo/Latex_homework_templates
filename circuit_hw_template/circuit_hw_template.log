@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.14)  15 AUG 2020 21:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.14)  16 AUG 2020 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
 \c@section=\count168
@@ -636,12 +636,12 @@ LaTeX Font Info:    ... okay on input line 22.
 * \topmargin=-102.04256pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -698,7 +698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 
-Overfull \hbox (61.27344pt too wide) in paragraph at lines 57--58
+Overfull \hbox (43.81937pt too wide) in paragraph at lines 57--58
 [] 
  []
 
@@ -706,11 +706,6 @@ Overfull \hbox (61.27344pt too wide) in paragraph at lines 57--58
 \realshift=\dimen299
 \realshift=\dimen300
 \realshift=\dimen301
-
-Overfull \hbox (1.79613pt too wide) in paragraph at lines 77--78
-[]|[]
- []
-
 
 Overfull \hbox (12.0pt too wide) in paragraph at lines 62--79
 [][] 
@@ -722,7 +717,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
  []
 
 
-Overfull \hbox (61.27344pt too wide) in paragraph at lines 108--109
+Overfull \hbox (43.81937pt too wide) in paragraph at lines 108--109
 [] 
  []
 
@@ -731,12 +726,36 @@ Overfull \hbox (61.27344pt too wide) in paragraph at lines 108--109
 \realshift=\dimen304
 \realshift=\dimen305
 
-Overfull \hbox (20.8947pt too wide) in paragraph at lines 129--130
+Overfull \hbox (17.50389pt too wide) in paragraph at lines 129--130
 [][]
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 112--131
+Overfull \hbox (12.0pt too wide) in paragraph at lines 112--132
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+[]
+ []
+
+
+Overfull \hbox (43.81937pt too wide) in paragraph at lines 161--162
+[] 
+ []
+
+\alshift=\dimen306
+\realshift=\dimen307
+\realshift=\dimen308
+\realshift=\dimen309
+
+Overfull \hbox (17.50389pt too wide) in paragraph at lines 182--183
+[][]
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 165--185
 [][] 
  []
 
@@ -749,27 +768,27 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 112--131
 ### simple group (level 1) entered at line 28 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 28305 strings out of 483065
- 704086 string characters out of 5963550
- 1155032 words of memory out of 5000000
- 42967 multiletter control sequences out of 15000+600000
- 547409 words of font info for 80 fonts, out of 8000000 for 9000
+ 28500 strings out of 483065
+ 709527 string characters out of 5963550
+ 1167011 words of memory out of 5000000
+ 43177 multiletter control sequences out of 15000+600000
+ 539523 words of font info for 51 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  68i,19n,71p,475b,982s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/ben/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/
-tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb>
-Output written on circuit_hw_template.pdf (1 page, 111369 bytes).
+s/cm/cmsy7.pfb>
+Output written on circuit_hw_template.pdf (1 page, 118523 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream

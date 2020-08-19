@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[10pt]{article}
 
 \usepackage[leqno]{amsmath}  % For maths
 \usepackage{amssymb}  % For more maths
@@ -15,7 +15,7 @@ lmargin = 0.3in,
 rmargin = 0.3in,}
 
 \newcommand{\bbox}{ % made /bbox command to make bounding box around text
-\collectbox{\setlength{\fboxsep}{5pt} \fbox{\BOXCONTENT}}}
+\collectbox{\setlength{\fboxsep}{5pt} \fbox{\BOXCONTENT}}} 
 
 \newcommand{\s}{\vspace{0.3cm}} % made /s command to create a vertical gap between text
 
@@ -23,10 +23,10 @@ rmargin = 0.3in,}
 
 %\pagecolor{gray!50!black} % For darker background colors to reduce white light
 
-\begin{center} \hrule \s {\textbf { \large ECE 420 --- Latex Homework Examples}} \end{center}
+\begin{center} \hrule \s {\textbf { \large ECE 333 --- Latex Homework Examples}} \end{center}
 
 {\textbf{Name:}\ John Doe \hspace{\fill} \textbf{Due Date:} August 32, 2020, 9:00 AM \par
-{\textbf{Mailbox Number:}} \ 420 \hspace{75 mm} \textbf{Assignment:} 3 \vspace{.4cm} \par \hrule \vspace{.4cm}
+{\textbf{Mailbox Number:}} \ 444 \hspace{93.5 mm} \textbf{Assignment:} 3 \vspace{.4cm} \par \hrule \vspace{.4cm}
 
 \textbf{Problem 1:} Solve for $V_{out}$ in the circuit below: \s
 
@@ -126,47 +126,66 @@ $L_1$ = 50\si{\micro}\si{\henry}, $R_1$ = 500\si{\micro}\si{\ohm}, $C_1$ = 700\s
     to[short] (6,2)
     to[C=$C_1$] (6,0)
     to[short] (4,0);
-\end{circuitikz} \s \s \s
+	\end{circuitikz} \s \s \s
+	
 \end{tabular}
 \end{minipage} \vspace{0.5cm}
-\hrule
+\hrule \s
+
+\textbf{Problem 3:} Solve for $V_{out}$ in the circuit below: \s
+
+\begin{minipage}{0.28\textwidth}
+    
+	$ V_{p1} = \left(\frac{R_1}{R_1 + R_2}\right) V_1 $ \s
+
+	$ \frac{V_{p1}-0}{R_{3}}+\frac{V_{p1}-V_{out1}}{R_{4}}=0 $ \s
+
+	$ \frac{1}{R_{3}}V_{p1}+\frac{1}{R_{4}}V_{p1}-\frac{1}{R_{4}}V_{out1}=0 $ \s
+
+	$ \frac{1}{R_{4}}V_{out1}=\frac{1}{R_{3}}V_{p1}+\frac{1}{R_{4}}V_{out1} $ \s
+
+	$ V_{out1}=\left(\frac{R_{4}}{R_{3}}+1\right)V_{p1} $ \s
+
+	$ \frac{V_{out1}}{V_{in}}=\left(\frac{R_{4}}{R_{3}}+1\right)\left(\frac{R_1}{R_1 + R_2}\right) $ \vspace{0.1cm} \s
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+
+	$ \frac{0-V_{out1}}{R_5}+\frac{0-V_{out2}}{R_6}=0$ \s
+
+	$ -\frac{V_{out1}}{R_5}-\frac{V_{out2}}{R_6}=0$ \s
+
+	$ -\frac{V_{out1}}{R_5}=\frac{V_{out2}}{R_6}$ \s
+
+	$ V_{out2}=-\left(\frac{R_6}{R_5}\right)V_{out1}$ 
+	
+	\bbox{$ \frac{V_{out}}{V_{in}}=\left(\frac{-R_6}{R_5}\right)\left(\frac{R_{4}}{R_{3}}+1\right)\left(\frac{R_1}{R_1 + R_2}\right)$} 
+
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{tabular}{p{\textwidth}} \hspace{1cm}
+$L_1$ = 50\si{\micro}\si{\henry}, $R_1$ = 500\si{\micro}\si{\ohm}, $C_1$ = 700\si{\micro}\si{\coulomb} \s
+
+	\begin{circuitikz}[scale=1.1]
+	\draw (0,0) 
+	to[american voltage source,v=$V_1$] (0,2)
+    to[short] (2,2)
+    to[R=$R_1$] (2,0)
+    to[short] (0,0);
+    \draw (2,2)
+    to[short] (4,2)
+    to[L=$L_1$] (4,0)
+    to[short] (2,0);
+    \draw (4,2)
+    to[short] (6,2)
+    to[C=$C_1$] (6,0)
+    to[short] (4,0);
+	\end{circuitikz} \s \s \s
+	
+\end{tabular}
+\end{minipage} \vspace{0.5cm}
+\hrule \s
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
